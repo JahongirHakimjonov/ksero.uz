@@ -6,6 +6,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from apps.shared.encoders.encoder import PrettyJSONEncoder
 from apps.shared.models.base import AbstractBaseModel
 from apps.users.managers.users import UserManager
+from apps.users.models.bot import BotUser
 
 
 class RoleChoices(models.TextChoices):
@@ -49,6 +50,14 @@ class User(AbstractUser, AbstractBaseModel):
         verbose_name=_("Ro'yxatdan o'tish turi"),
         db_index=True,
         default=RegisterTypeChoices.PHONE,
+    )
+    bot_user = models.OneToOneField(
+        BotUser,
+        on_delete=models.SET_NULL,
+        related_name="user",
+        verbose_name=_("Bot foydalanuvchisi"),
+        null=True,
+        blank=True,
     )
 
     USERNAME_FIELD = "phone"

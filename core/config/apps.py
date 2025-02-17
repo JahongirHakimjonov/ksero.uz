@@ -26,4 +26,5 @@ DEFAULT_APPS = [
 PROJECT_APPS = [
     "apps.shared.apps.SharedConfig",
     "apps.users.apps.UsersConfig",
+    "apps.backend.apps.BackendConfig",
 ]

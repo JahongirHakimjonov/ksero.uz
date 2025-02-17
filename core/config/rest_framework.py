@@ -26,4 +26,5 @@ SPECTACULAR_SETTINGS = {
     "REDOC_DIST": "SIDECAR",
     "TITLE": "Ksero.uz Django Rest API",
     "DESCRIPTION": "Ksero.uz Django Rest API",
+    "SCHEMA_PATH_PREFIX": "/api/v1",
 }

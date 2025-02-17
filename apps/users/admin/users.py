@@ -25,6 +25,7 @@ class UserAdmin(BaseUserAdmin, ModelAdmin):
     list_filter = ("role", "is_active")
     list_editable = ("is_active",)
     list_display_links = ("username", "avatars")
+    autocomplete_fields = ("bot_user",)
     fieldsets = (
         (None, {"fields": ("phone", "password")}),
         (
@@ -37,7 +38,7 @@ class UserAdmin(BaseUserAdmin, ModelAdmin):
                     "last_name",
                     "avatar",
                     "register_type",
-                    "sos_count",
+                    "bot_user",
                 )
             },
         ),
