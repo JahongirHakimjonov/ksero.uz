@@ -16,7 +16,8 @@ urlpatterns = (
     + [
         path("", include("apps.shared.urls")),
         path("api/v1/", include("apps.users.urls")),
-        path("", include("apps.backend.urls")),
+        path("api/v1/", include("apps.payment.urls")),
+        path("api/v1/", include("apps.backend.urls")),
         path("ckeditor5/", include("django_ckeditor_5.urls")),
         path("rosetta/", include("rosetta.urls")),
         # Media and static files

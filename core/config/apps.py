@@ -12,6 +12,7 @@ THIRD_PARTY_APPS = [
     "rest_framework",
     "drf_spectacular",
     "drf_spectacular_sidecar",
+    "adminsortable2",
 ]
 
 DEFAULT_APPS = [
@@ -21,10 +22,12 @@ DEFAULT_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.sites",
 ]
 
 PROJECT_APPS = [
     "apps.shared.apps.SharedConfig",
     "apps.users.apps.UsersConfig",
     "apps.backend.apps.BackendConfig",
+    "apps.payment.apps.PaymentConfig",
 ]
