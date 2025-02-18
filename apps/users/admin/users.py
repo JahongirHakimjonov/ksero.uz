@@ -39,6 +39,7 @@ class UserAdmin(BaseUserAdmin, ModelAdmin):
                     "avatar",
                     "register_type",
                     "bot_user",
+                    "vip",
                 )
             },
         ),
