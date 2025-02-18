@@ -59,6 +59,7 @@ class User(AbstractUser, AbstractBaseModel):
         null=True,
         blank=True,
     )
+    vip = models.BooleanField(default=False, verbose_name=_("VIP"))
 
     USERNAME_FIELD = "phone"
     REQUIRED_FIELDS = ["username"]
